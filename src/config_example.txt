@@ -1,0 +1,55 @@
+# Example configuration for a quick parameter-grid simulation.
+# The values are intentionally modest so the program can be tested quickly.
+
+# ------------------------------------------------------------
+# Simulation parameters
+# ------------------------------------------------------------
+
+t_end = 5000.0
+tol = 1e-6
+initial_h = 0.01
+h_min = 1e-10
+max_val = 1e8
+rms_start = 4500.0
+
+# ------------------------------------------------------------
+# Collision parameters
+# ------------------------------------------------------------
+
+# collision_a0 is the angular collision boundary alpha_c.
+# It represents finite-radius contact: alpha_c = asin(R / (R + L)).
+collision_a0 = 0.05
+
+# Minimum rebound velocity prevents numerical sticking at the boundary.
+min_rebound = 1e-6
+
+# Velocity-dependent restitution model.
+# Options: large_steel, medium_steel, small_steel, aluminium, titanium, brass
+material = large_steel
+
+# ------------------------------------------------------------
+# Initial conditions
+# ------------------------------------------------------------
+
+initial_alpha = 1.0
+initial_alphaprime = 0.0
+
+# ------------------------------------------------------------
+# Parameter grid
+# ------------------------------------------------------------
+
+num_delta = 10
+num_epsilon = 10
+
+delta_min = 0.5
+delta_max = 2.0
+
+epsilon_min = 0.0
+epsilon_max = 0.5
+
+# ------------------------------------------------------------
+# Parallelism
+# ------------------------------------------------------------
+
+# Use 0 to automatically select the number of available hardware threads.
+num_threads = 0

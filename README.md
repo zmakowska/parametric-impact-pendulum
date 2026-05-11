@@ -18,10 +18,15 @@ finite, non-zero amplitude. This regime is not predicted by the classical zero-r
 model, which only predicts damped oscillations or parametric resonance with growing amplitude.
 
 Authors:
--------
+--------
 Zofia Makowska  
 Łukasz Gładczuk  
+
 Science Club Fenix
+
+This research project was developed by Zofia Makowska and Łukasz Gładczuk as part of research work within Science Club Fenix.
+
+The code and public repository were prepared by Zofia Makowska.
 
 
 Key Result:

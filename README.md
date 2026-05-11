@@ -5,7 +5,7 @@ Numerical simulation | experimental validation | nonlinear dynamics | impact sys
 
 Description:
 ------------
-This repository presents my research project on the dynamics of the Lato-Lato / clackers toy:
+This repository presents my research project on the dynamics of the clackers toy:
 two balls connected by a string with a vertically driven midpoint.
 
 Between impacts, the system behaves like a parametrically driven pendulum. During impacts,
@@ -17,13 +17,11 @@ The main result is the identification of a third dynamical regime: stable oscill
 finite, non-zero amplitude. This regime is not predicted by the classical zero-radius Mathieu
 model, which only predicts damped oscillations or parametric resonance with growing amplitude.
 
-Author:
+Authors:
 -------
 Zofia Makowska  
-XIV LO im. Stanisława Staszica, Warsaw  
+Łukasz Gładczuk  
 Science Club Fenix
-
-This project was developed by Zofia Makowska as part of research work within Science Club Fenix.
 
 
 Key Result:
@@ -33,7 +31,7 @@ The classical Mathieu model predicts two main regimes:
 1. Damped oscillations converging to rest.
 2. Parametric resonance with growing amplitude.
 
-In this project, I identified a third regime caused by finite-radius impacts:
+In this project, we identified a third regime caused by finite-radius impacts:
 
     stable oscillations with finite, non-zero amplitude.
 
@@ -44,7 +42,7 @@ parameters, including ball radius, string length, driving amplitude and material
 restitution.
 
 
-What I Built:
+What we Built:
 -------------
 - A C++ simulation of a parametrically driven impact pendulum.
 - Collision handling for finite-radius impacts.
@@ -77,10 +75,10 @@ Between impacts, the angular motion is modeled as a parametrically driven pendul
 
 where:
 
-- alpha is angular displacement,
-- delta = omega / omega_0 is dimensionless driving frequency,
-- epsilon = H / L is dimensionless driving amplitude,
-- beta is damping.
+- $\alpha$ is angular displacement,
+- $\delta = \omega / \omega_0$ is dimensionless driving frequency,
+- $\epsilon = H / L$ is dimensionless driving amplitude,
+- $\beta$ is damping.
 
 Finite ball radius introduces impacts at:
 
@@ -90,8 +88,8 @@ Finite ball radius introduces impacts at:
 
 where:
 
-- R is ball radius,
-- L is string length.
+- $R$ is ball radius,
+- $L$ is string length.
 
 The collision model includes oblique collision geometry and velocity-dependent restitution
 based on contact mechanics.
@@ -105,12 +103,12 @@ The simulation performs long-time integration and computes RMS amplitude after t
 RMS = \sqrt{\frac{1}{T}\int_{t_0}^{t_0+T}\alpha(t)^2\,dt}
 ```
 
-The RMS value is used to classify the long-term response of the system across parameter space.
+The $RMS$ value is used to classify the long-term response of the system across parameter space.
 
 
 Simulation Features:
 --------------------
-- Adaptive Runge--Kutta integration.
+- Adaptive Runge-Kutta integration.
 - Collision detection and event handling.
 - Parameter sweeps over delta and epsilon.
 - RMS-based classification of oscillation regimes.
@@ -171,7 +169,7 @@ Compilation:
 ------------
 To compile the program, run:
 
-    g++ -std=c++11 -O3 latolato.cpp -o latolato -pthread
+    g++ -std=c++11 -O3 clackers.cpp -o clackers -pthread
 
 This command compiles the source file "latolato.cpp" with optimization level 3 and links
 with pthreads.
@@ -183,11 +181,11 @@ The executable expects two command-line arguments: a configuration file and a re
 
 Basic run:
 
-    ./latolato config_example.txt result.csv
+    ./clackers config_example.txt result.csv
 
 On Linux, to run the simulation on specific CPU cores, for example cores 4 to 15:
 
-    time taskset -c 4-15 ./latolato config_example.txt result.csv
+    time taskset -c 4-15 ./clackers config_example.txt result.csv
 
 Explanation:
 

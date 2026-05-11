@@ -8,6 +8,8 @@ Description:
 This repository presents my research project on the dynamics of the clackers toy:
 two balls connected by a string with a vertically driven midpoint.
 
+The research was conducted in collaboration with Łukasz Gładczuk within Science Club Fenix.
+
 Between impacts, the system behaves like a parametrically driven pendulum. During impacts,
 finite-size collision geometry introduces non-smooth dynamics. The project investigates where
 the classical Mathieu-equation description fails and how finite collision radius changes the

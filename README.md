@@ -154,7 +154,7 @@ Repository Structure:
     src/        C++ simulation code and example configuration
     data/       sample CSV outputs
     figures/    selected figures from simulation and experiment
-    docs/       abstract, poster and project write-up
+    docs/       abstract and project poster
 
 
 Requirements:
@@ -248,7 +248,6 @@ Materials:
 ----------
 - docs/abstract.pdf — project abstract
 - docs/poster.pdf — research poster
-- docs/project_writeup.pdf — extended project write-up
 - figures/ — selected plots and experimental setup images
 - data/ — sample simulation outputs
 
